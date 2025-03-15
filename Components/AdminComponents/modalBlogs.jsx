@@ -74,6 +74,9 @@ const ModalBlogs = ({ isOpen, setIsOpen, fetchBlogs }) => {
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50 p-4">
           <div className="bg-white p-6 rounded-lg w-full max-w-lg">
+            <h2 className="text-2xl font-bold mb-4 border-b text-center">
+              Add Blog
+            </h2>
             <form onSubmit={onSubmitHandler} className="grid gap-4">
               <p className="text-lg font-bold">Upload Thumbnail</p>
               <label htmlFor="image">
@@ -99,8 +102,8 @@ const ModalBlogs = ({ isOpen, setIsOpen, fetchBlogs }) => {
                 <Image
                   src={
                     authorImg
-                      ? URL.createObjectURL(authorImg):
-                      assets.upload_area
+                      ? URL.createObjectURL(authorImg)
+                      : assets.upload_area
                   }
                   alt="author"
                   width={100}
